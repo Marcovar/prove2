@@ -4,7 +4,7 @@
 #     -la lunghezza sarà l'input numerico dall'utente
 
 #guardate random.choiche()
-import string
+
 import random
 lunghezza = int(input("Quanti caratteri vuoi nella tua password? "))
 def Password(lunghezza):
@@ -15,7 +15,7 @@ def Password(lunghezza):
         lista_caratteri.append(random.choice("qwertyuiopasdfghjklzxcvbnm0123456789?!^_@$%"))
         
     random.shuffle(lista_caratteri)
-    
+
     password = "".join(lista_caratteri)
     return password
 password_generata = Password(lunghezza)
