@@ -9,16 +9,14 @@ import random
 lunghezza = int(input("Quanti caratteri vuoi nella tua password? "))
 def Password(lunghezza):
     lista_caratteri = []
-    lista_caratteri.append(random.choice("0123456789"))
-    lista_caratteri.append(random.choice(string.ascii_letters))
-    lista_caratteri.append(random.choice("?!^_@$%"))
+    lista_caratteri.append(random.choice("qwertyuiopasdfghjklzxcvbnm0123456789?!^_@$%"))
+    
     while len(lista_caratteri) < lunghezza:
-        lista_caratteri.append(random.choice(string.ascii_letters + "0123456789" + "?!^_@$%"))
+        lista_caratteri.append(random.choice("qwertyuiopasdfghjklzxcvbnm0123456789?!^_@$%"))
         
     random.shuffle(lista_caratteri)
-
+    
     password = "".join(lista_caratteri)
     return password
-
 password_generata = Password(lunghezza)
 print(f"La tua password generata è: {password_generata}")
