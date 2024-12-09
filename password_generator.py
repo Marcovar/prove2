@@ -4,7 +4,7 @@
 #     -la lunghezza sarà l'input numerico dall'utente
 
 #guardate random.choiche()
-
+# con import strings si possono importare codice ascii e tante altre liste
 import random
 lunghezza = int(input("Quanti caratteri vuoi nella tua password? "))
 def Password(lunghezza):
@@ -14,7 +14,7 @@ def Password(lunghezza):
     while len(lista_caratteri) < lunghezza:
         lista_caratteri.append(random.choice("qwertyuiopasdfghjklzxcvbnm0123456789?!^_@$%"))
         
-    random.shuffle(lista_caratteri)
+    password=random.shuffle(lista_caratteri)
 
     password = "".join(lista_caratteri)
     return password
